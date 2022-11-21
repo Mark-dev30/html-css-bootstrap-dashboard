@@ -79,6 +79,40 @@ aside{
     height: 50px;
 }
 
+.icon-header{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.list_header{
+    padding: 0px;
+    list-style-type: none;
+    margin-bottom: 0;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.fa-bell{
+    color: orange;
+}
+
+.list_header a{
+    text-decoration: none;
+    color: rgb(94, 94, 94);
+}
+
+.border_0px{
+    border: 0px;
+    background-color: transparent;
+}
+
+.input_search{
+    background-color: #e5e5e5;
+    border-radius: 9px;
+    padding: 7px;
+}
+
+
 
 /* MAIN */
 
@@ -100,6 +134,13 @@ aside{
 }
 
 
+
+/* HOVER SIDEBAR */
+.col_sidebar a:hover{
+    background-color: rgb(139, 139, 139);
+}
+
+
 /* TOPBAR */
 
 .main_view{
@@ -112,6 +153,8 @@ aside{
     border-radius: 20px;
     font-size: 12px;
 }
+
+
 
 /* MAIN VIEW */
 
@@ -137,6 +180,18 @@ aside{
     border: 2px solid grey;
     border-radius: 6px;
     color: grey;
+}
+
+
+
+/* HOVER TABLE */
+.row_table:hover{
+    background-color: rgb(209, 206, 206);
+}
+
+.icon_action:hover{
+    background-color: grey;
+    color: white;
 }
 
 /* IMG STARTS */

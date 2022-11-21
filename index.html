@@ -18,38 +18,33 @@
         <header class="bg_grey d-flex align-items-center">
             <div class="container-fluid bg_white">
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-2">
                         <div class="content">
                             <img class="d-lg-none" src="./img/mobile-logo.png" alt="mobile-logo" width="50" height="50">
                             <img class="img_logo d-none d-lg-block" src="./img/logo.svg" alt="mobile-logo">
                         </div>
                     </div>
-                    <div class="col-6 d-flex align-items-center ">
+                    <div class="col-8 d-flex align-items-center ">
                         <div class="content">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary" placeholder="123-45-678" type="button">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                    </button>
-                                </div>
-                                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                            <div class="input-group input_search">
+                                <span class="input-group-text border_0px" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                <input type="text" class="form-control border_0px" placeholder="Prova a cercare: Lezioni di Lavarel" aria-label="Username" aria-describedby="basic-addon1">
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div class="content d-flex icon-header">
-                            <ul>
+                    <div class="col-2">
+                        <div class="content d-flex icon-header align-items-center">
+                            <ul class="list_header d-flex">
                                 <li><a href="#"> <i class="fa-solid fa-list-ul"></i></a></li>
                                 <li><a href="#"><i class="fa-solid fa-circle-question"></i></a></li>
                                 <li><a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a></li>
                                 <li>
-                                    <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-bell"></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                      </ul>
+                                    <i id="dropdownMenuBell" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="fa-solid fa-bell"></i>
+                                    <ul class="dropdown-menu" aria-labelledby="#dropdownMenuBell">
+                                        <li><a class="dropdown-item" href="#">Profilo</a></li>
+                                        <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>
@@ -71,11 +66,13 @@
                                         <span class="d-none d-lg-inline-block">Home</span>
                                     </a>
                                 </li>
-                                <li class="py-2">
-                                    <a href="#">
-                                        <i class="fa-solid fa-chart-simple pe-lg-3"></i>
-                                        <span class="d-none d-lg-inline-block">Stats</span>
-                                    </a>
+                                <li>
+                                    <div class="icon_sidebar">
+                                        <a href="#">
+                                            <i class="fa-solid fa-chart-simple pe-lg-3"></i>
+                                            <span class="d-none d-lg-inline-block">Stats</span>
+                                        </a>
+                                    </div>
                                 </li>
                                 <li>
                                     <a href="#">
@@ -109,13 +106,73 @@
                             <div class="col-12 col-md-4 col-lg-2 order-md-3 text-white text-md-end">
                                 <span>Nuovo Studente</span>
                                 <button class="btn btn-primary border border-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-plus"></i></button>
-                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                                <div class="offcanvas offcanvas-end off_canvas" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                                     <div class="offcanvas-header">
                                         <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                     </div>
                                     <div class="offcanvas-body">
-                                      ...
+                                        <form class="row g-3">
+                                            <div class="col-md-6 text-start">
+                                                <label for="inputName4" class="form-label text-dark">Nome</label>
+                                                <input type="text" class="form-control" id="inputName4">
+                                            </div>
+                                            <div class="col-md-6 text-start">
+                                                <label for="inputlastname4" class="form-label text-dark">Cognome</label>
+                                                <input type="text" class="form-control" id="inputlastname4">
+                                            </div>
+                                            <div class="col-md-6  text-start">
+                                                <label for="inputEmail4" class="form-label text-dark">Email</label>
+                                                <label class="visually-hidden" for="autoSizingInputGroup"></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text">@</div>
+                                                    <input type="text" class="form-control" id="autoSizingInputGroup">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6  text-start">
+                                                <label for="inputPassword4" class="form-label text-dark">Password</label>
+                                                <input type="password" class="form-control" id="inputPassword4">
+                                            </div>
+                                            <div class="col-12 text-start">
+                                                <label for="inputAddress" class="form-label text-dark">Indirizzo</label>
+                                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                            </div>
+                                            <div class="col-md-6 text-start">
+                                                <label for="inputCity" class="form-label text-dark">Città</label>
+                                                <input type="text" class="form-control" id="inputCity">
+                                            </div>
+                                            <div class="col-md-4 text-start">
+                                                <label for="inputState" class="form-label text-dark">Stato</label>
+                                                <select id="inputState" class="form-select">
+                                                    <option selected>Scegli</option>
+                                                    <option>Italia</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-2 text-start">
+                                                <label for="inputZip" class="form-label text-dark">Cap</label>
+                                                <input type="text" class="form-control" id="inputZip">
+                                            </div>
+                                            <div class="col-md-12 text-start">
+                                                <label for="inputEmail4" class="form-label text-dark">Foto</label>
+                                                <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text">Scegli File</div>
+                                                    <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Nessun file selezionato">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 text-start">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                    <label class="form-check-label text-dark" for="gridCheck">
+                                                    Selezione per proseguire
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 text-start">
+                                                <button type="submit" class="btn btn-primary">Salva</button>
+                                                <button type="submit" class="btn btn-warning">Svuota</button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -166,7 +223,7 @@
                                                       </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
+                                                        <tr class="row_table">
                                                             <th scope="row" style="width:50%">
                                                                 <i class="fa-solid fa-code icon_code"></i>
                                                                 <span>Classe 75</span>
@@ -179,7 +236,7 @@
                                                                 <span><i class="fa-solid fa-trash icon_action"></i></span>
                                                             </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr class="row_table">
                                                             <th scope="row" style="width:50%">
                                                                 <i class="fa-solid fa-code icon_code"></i>
                                                                 <span>Classe 76</span>
@@ -192,7 +249,7 @@
                                                                 <span><i class="fa-solid fa-trash icon_action"></i></span>
                                                             </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr class="row_table">
                                                             <th scope="row" style="width:50%">
                                                                 <i class="fa-solid fa-code icon_code"></i>
                                                                 <span>Classe 77</span>
@@ -205,7 +262,7 @@
                                                                 <span><i class="fa-solid fa-trash icon_action"></i></span>
                                                             </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr class="row_table">
                                                             <th scope="row" style="width:50%">
                                                                 <i class="fa-solid fa-code icon_code"></i>
                                                                 <span>Classe 78</span>
@@ -218,7 +275,7 @@
                                                                 <span><i class="fa-solid fa-trash icon_action"></i></span>
                                                             </td>
                                                         </tr>
-                                                        <tr >
+                                                        <tr class="row_table">
                                                             <th scope="row" style="width:50%">
                                                                 <i class="fa-solid fa-code icon_code"></i>
                                                                 <span>Classe 79</span>
@@ -231,7 +288,7 @@
                                                                 <span><i class="fa-solid fa-trash icon_action"></i></span>
                                                             </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr class="row_table">
                                                             <th scope="row" style="width:50%">
                                                                 <i class="fa-solid fa-code icon_code"></i>
                                                                 <span>Classe 80</span>
@@ -244,7 +301,7 @@
                                                                 <span><i class="fa-solid fa-trash icon_action"></i></span>
                                                             </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr class="row_table">
                                                             <th scope="row" style="width:50%">
                                                                 <i class="fa-solid fa-code icon_code"></i>
                                                                 <span>Classe 81</span>
@@ -257,7 +314,7 @@
                                                                 <span><i class="fa-solid fa-trash icon_action"></i></span>
                                                             </td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr class="row_table">
                                                             <th scope="row" style="width:50%">
                                                                 <i class="fa-solid fa-code icon_code"></i>
                                                                 <span>Classe 82</span>
