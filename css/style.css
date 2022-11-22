@@ -39,7 +39,7 @@
 
 header{
     width: 100%;
-    height: 100px;
+    height: 70px;
     position: fixed;
     top: 0;
     left: 0;
@@ -48,25 +48,25 @@ header{
 main{
     width: 100%;
     display: flex;
-    padding-top: 100px;
+    padding-top: 70px;
 }
 
 aside{
     width: 60px;
-    height: calc(100vh - 100px);  
+    height: calc(100vh - 70px);  
     
 }
 
 .container_main_view{
     width: calc(100vw - 60px);
-    height: calc(100vh - 100px);
+    height: calc(100vh - 70px);
     overflow-y: auto;
 }
 
 
 /* HEADER */
 
-.content{
+.content, .icon-header, .list_header, .main_view{
     width: 100%;
 }
 
@@ -79,17 +79,11 @@ aside{
     height: 50px;
 }
 
-.icon-header{
-    width: 100%;
-    height: 100%;
-    
-}
 
 .list_header{
     padding: 0px;
     list-style-type: none;
     margin-bottom: 0;
-    width: 100%;
     justify-content: space-evenly;
 }
 .fa-bell{
@@ -119,7 +113,7 @@ aside{
 /* SIDEBAR */
 
 
-.container_sidebar, .row_sidebar{
+.container_sidebar, .row_sidebar, .icon-header{
     height: 100%;
 }
 
@@ -142,10 +136,6 @@ aside{
 
 
 /* TOPBAR */
-
-.main_view{
-    width: 100%;
-}
 
 .badge_blue{
     background-color: #165bba;
